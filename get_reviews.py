@@ -169,7 +169,7 @@ def get_reviews_first_ten_pages(driver, book_id, sort_order, rating):
         # GoodReads will only load the first 10 pages of reviews.
         # Click through each of the following nine pages and scrape each page.
         page_counter = 2
-        while page_counter <=10:
+        while page_counter <=3:
             try:
                 if driver.find_element(By.LINK_TEXT, str(page_counter)):
                     driver.find_element(By.LINK_TEXT, str(page_counter)).click()
